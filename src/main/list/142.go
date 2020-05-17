@@ -1,4 +1,4 @@
-package main
+package list
 
 //set存储
 func detectCycle1(head *ListNode) *ListNode {

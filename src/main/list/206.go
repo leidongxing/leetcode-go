@@ -1,4 +1,4 @@
-package main
+package list
 
 //https://leetcode-cn.com/problems/reverse-linked-list/
 func reverseList(head *ListNode) *ListNode {
