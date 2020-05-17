@@ -13,7 +13,7 @@ func hasCycle1(head *ListNode) bool {
 	return false
 }
 
-//特殊值
+//特殊值修改链表
 func hasCycle2(head *ListNode) bool {
 	for head != nil {
 		if head.Val == 18464187222 {
