@@ -1,9 +1,4 @@
-package _41
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+package main
 
 //set存储
 func hasCycle1(head *ListNode) bool {
@@ -30,6 +25,7 @@ func hasCycle2(head *ListNode) bool {
 	return false
 }
 
+//快慢指针
 func hasCycle(head *ListNode) bool {
 	if head == nil || head.Next == nil {
 		return false

@@ -1,9 +1,4 @@
-package _06
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+package main
 
 //https://leetcode-cn.com/problems/reverse-linked-list/
 func reverseList(head *ListNode) *ListNode {
