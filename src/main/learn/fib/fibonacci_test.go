@@ -1,4 +1,4 @@
-package test
+package fib
 
 import "testing"
 
@@ -16,7 +16,7 @@ func TestFibList(t *testing.T) {
 	}
 }
 
-//go中交换变量
+//go中 交换变量
 func TestExchange(t *testing.T) {
 	a := 1
 	b := 2

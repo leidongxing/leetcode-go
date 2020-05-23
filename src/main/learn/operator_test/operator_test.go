@@ -1,8 +1,14 @@
-package test
+package operator_test
 
 import (
 	"os"
 	"testing"
+)
+
+const (
+	Readable = 1 << iota
+	Writable
+	Executable
 )
 
 func TestCompareArray(t *testing.T) {

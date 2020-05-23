@@ -1,4 +1,4 @@
-package test
+package type_test
 
 import "testing"
 
@@ -24,6 +24,6 @@ func TestPoint(t *testing.T) {
 
 func TestString(t *testing.T) {
 	var s string
-	t.Log("*" + s + "*")
+	t.Log("*" + s + "*") //string的初始化值为 ""
 	t.Log(len(s))
 }
