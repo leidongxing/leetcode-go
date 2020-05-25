@@ -22,7 +22,7 @@ func min(a int, b int) int {
 	return a
 }
 
-func Test(t *testing.T) {
+func Test_120(t *testing.T) {
 	var triangle = [][]int{{2}, {3, 4}, {6, 5, 7}, {4, 1, 8, 3}}
 	minimumTotal(triangle)
 }
