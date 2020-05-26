@@ -1,4 +1,4 @@
-package dp
+package dynamic_programming
 
 import "testing"
 
@@ -11,8 +11,8 @@ func Test_5(t *testing.T) {
 func longestPalindrome(s string) string {
 	n := len(s)
 	result := ""
-	//二维数组初始化  dp[i][j]表示s[i..j]是否为回文子串
-	//状态转移方程   (s[i]==s[j] && dp[i+1][j-1]==1) -----> dp[i][j]==1
+	//二维数组初始化  dynamic-programming[i][j]表示s[i..j]是否为回文子串
+	//状态转移方程   (s[i]==s[j] && dynamic-programming[i+1][j-1]==1) -----> dynamic-programming[i][j]==1
 	dp := make([][]int, n)
 	for i := 0; i < n; i++ {
 		dp[i] = make([]int, n)

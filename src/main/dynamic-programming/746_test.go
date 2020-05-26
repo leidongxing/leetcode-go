@@ -1,9 +1,9 @@
-package dp
+package dynamic_programming
 
 import "testing"
 
 //使用最小花费爬楼梯
-//dp[i]=Min(dp[i-1]+cost[i-1],dp[i-2]+cost[i-1])
+//dynamic-programming[i]=Min(dynamic-programming[i-1]+cost[i-1],dynamic-programming[i-2]+cost[i-1])
 func minCostClimbingStairs(cost []int) int {
 	n := len(cost)
 	dp := make([]int, n+1, n+1)

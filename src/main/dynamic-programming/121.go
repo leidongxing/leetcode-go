@@ -1,4 +1,4 @@
-package dp
+package dynamic_programming
 
 func maxProfit(prices []int) int {
 	var max int = 0
