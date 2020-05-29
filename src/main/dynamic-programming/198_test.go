@@ -27,12 +27,8 @@ func rob(nums []int) int {
 				dp[i] = v2
 			}
 		}
-
-		if dp[n] > dp[n-1] {
-			return dp[n]
-		} else {
-			return dp[n-1]
-		}
+		//不需要比较
+		return dp[n]
 	}
 }
 
