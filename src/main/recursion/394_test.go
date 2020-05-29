@@ -8,7 +8,7 @@ var (
 )
 
 //使用递归求解
-func decodeString1(s string) string {
+func decodeString(s string) string {
 	src = s
 	ptr = 0
 	return getString()
