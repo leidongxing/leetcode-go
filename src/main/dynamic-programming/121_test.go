@@ -4,12 +4,13 @@ import "testing"
 
 //买卖股票的最佳时机  买入和卖出一支股票一次
 func maxProfit1(prices []int) int {
-	if len(prices) == 0 {
+	if len(prices) < 2 {
 		return 0
 	}
 	profit := 0
 	buy := prices[0]
 	for i := 1; i < len(prices); i++ {
+		//先看 买是否合适
 		if buy > prices[i] {
 			buy = prices[i]
 		} else if prices[i]-buy > profit {
