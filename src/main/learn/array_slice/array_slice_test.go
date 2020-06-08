@@ -28,7 +28,9 @@ func TestArraySection(t *testing.T) {
 	arr := [...]int{1, 2, 3, 4, 5}
 	//取索引0到3的元素 不包含3
 	arr1Sec := arr[:3]
+	arr2Sec := arr[3:]
 	t.Log(arr1Sec)
+	t.Log(arr2Sec)
 }
 
 func TestSliceInit(t *testing.T) {

@@ -1,27 +1,21 @@
 package list
 
-//https://leetcode-cn.com/problems/reverse-linked-list/
+//反转链表
 func reverseList(head *ListNode) *ListNode {
-	//记录前面的节点
+	//存储前一个节点  head的前节点是nil
 	var pre *ListNode = nil
 	//记录当前节点
 	cur := head
+	//当前节点不为空
 	for cur != nil {
+		//temp保存当前节点的后继节点
 		temp := cur.Next
+		//反转  当前节点的下一个节点是它的前一个节点
 		cur.Next = pre
-		pre = cur
-		cur = temp
-	}
-	return pre
-}
 
-func reverseList1(head *ListNode) *ListNode {
-	var pre *ListNode = nil
-	cur := head
-	for cur != nil {
-		temp := cur.Next
-		cur.Next = pre
+		//temp的前一个节点变为当前节点
 		pre = cur
+		//当前节点替换为下一个节点 也就是temp
 		cur = temp
 	}
 	return pre
