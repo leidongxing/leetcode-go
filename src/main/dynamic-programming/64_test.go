@@ -2,6 +2,7 @@ package dynamic_programming
 
 import "testing"
 
+//最小路径和
 func minPathSum(grid [][]int) int {
 	//初始化数组
 	m := len(grid)
