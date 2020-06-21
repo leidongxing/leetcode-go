@@ -4,10 +4,32 @@ import (
 	"testing"
 )
 
+//目标和  sum(P)-sum(N)=target    sum(P)+sum(N)+sum(P)-sum(N)=sum(P)+sum(N)+target  2*sum(P)=target+sum(N)
+func findTargetSumWays(nums []int, S int) int {
+	sum := 0
+	for i := 0; i < len(nums); i++ {
+		sum += nums[i]
+	}
+	//和小于S   sum+S其实就是2*sum(P)
+	if sum < S || (sum+S)&1 == 1 {
+		return 0
+	}
+	target := (sum + S) / 2
+	//容量为target的有多少种方案
+	dp := make([]int, target+1)
+	dp[0] = 1
+	for i := 0; i < len(nums); i++ {
+		for j := target; j >= nums[i]; j-- {
+			dp[j] = dp[j] + dp[j-nums[i]]
+		}
+	}
+	return dp[target]
+}
+
 //目标和  从前往后递归
 var result = 0
 
-func findTargetSumWays(nums []int, S int) int {
+func findTargetSumWays2(nums []int, S int) int {
 	result = 0
 	calculate(nums, 0, 0, S)
 	return result
