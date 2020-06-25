@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-//最接近的三数之和1
+//最接近的三数之和
 func threeSumClosest(nums []int, target int) int {
 	sort.Ints(nums)
 	var (
