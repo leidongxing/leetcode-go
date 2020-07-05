@@ -1,4 +1,4 @@
-package _math
+package math
 
 //回文数
 func isPalindrome(x int) bool {

@@ -1,4 +1,4 @@
-package dynamic_programming
+package double_pointer
 
 import (
 	"math"
@@ -6,6 +6,12 @@ import (
 
 //长度最小的子数组  假想一个队列 不断入队 直到和大于s  更新长度
 func minSubArrayLen(s int, nums []int) int {
+	min := func(x, y int) int {
+		if x < y {
+			return x
+		}
+		return y
+	}
 	n := len(nums)
 	if n == 0 {
 		return 0
