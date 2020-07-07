@@ -2,12 +2,6 @@ package tree
 
 import "testing"
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 //路径总和
 func hasPathSum(root *TreeNode, sum int) bool {
 	if root == nil {
