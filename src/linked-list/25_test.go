@@ -1,4 +1,4 @@
-package list
+package linked_list
 
 //K个一组翻转链表
 //增加一个虚拟节点hair

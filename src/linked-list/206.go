@@ -1,4 +1,4 @@
-package list
+package linked_list
 
 //反转链表
 func reverseList(head *ListNode) *ListNode {

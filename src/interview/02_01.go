@@ -1,10 +1,5 @@
 package interview
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 //移除重复节点  双重循环
 func removeDuplicateNodes(head *ListNode) *ListNode {
 	this := head

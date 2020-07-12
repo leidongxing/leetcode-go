@@ -1,4 +1,4 @@
-package list
+package linked_list
 
 //set存储
 func detectCycle1(head *ListNode) *ListNode {
