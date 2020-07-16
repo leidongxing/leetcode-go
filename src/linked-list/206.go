@@ -1,6 +1,6 @@
 package linked_list
 
-//反转链表
+//反转链表 双指针迭代
 func reverseList(head *ListNode) *ListNode {
 	//存储前一个节点  head的前节点是nil
 	var pre *ListNode = nil
@@ -19,4 +19,15 @@ func reverseList(head *ListNode) *ListNode {
 		cur = temp
 	}
 	return pre
+}
+
+//递归版本
+func reverseList1(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
+	p := reverseList1(head.Next)
+	head.Next.Next = head
+	head.Next = nil
+	return p
 }
