@@ -5,12 +5,6 @@ import (
 	"testing"
 )
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 //二叉树的最小深度
 func minDepth(root *TreeNode) int {
 	if root == nil {
