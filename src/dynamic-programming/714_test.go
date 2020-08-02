@@ -3,7 +3,7 @@ package dynamic_programming
 import "testing"
 
 //买卖股票的最佳时机含手续费
-func maxProfit3(prices []int, fee int) int {
+func maxProfit4(prices []int, fee int) int {
 	if len(prices) == 0 {
 		return 0
 	}
@@ -28,5 +28,5 @@ func maxProfit3(prices []int, fee int) int {
 }
 
 func Test_714(t *testing.T) {
-	t.Log(maxProfit3([]int{1, 3, 2, 8, 4, 9}, 2)) //8
+	t.Log(maxProfit4([]int{1, 3, 2, 8, 4, 9}, 2)) //8
 }
