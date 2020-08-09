@@ -2,17 +2,17 @@ package depth_first_breadth_first
 
 //找树左下角的值
 func findBottomLeftValue1(root *TreeNode) int {
-	stack := make([]*TreeNode, 0)
-	stack = append(stack, root)
+	queue := make([]*TreeNode, 0)
+	queue = append(queue, root)
 	node := root
-	for len(stack) > 0 {
-		node = stack[0]
-		stack = stack[1:]
+	for len(queue) > 0 {
+		node = queue[0]
+		queue = queue[1:]
 		if node.Right != nil {
-			stack = append(stack, node.Right)
+			queue = append(queue, node.Right)
 		}
 		if node.Left != nil {
-			stack = append(stack, node.Left)
+			queue = append(queue, node.Left)
 		}
 	}
 	return node.Val
