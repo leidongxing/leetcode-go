@@ -1,4 +1,4 @@
-package src
+package string
 
 import "testing"
 
